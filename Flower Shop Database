@@ -1,0 +1,25 @@
+--Create a database of a store of your choice
+
+CREATE TABLE flowers (id INTEGER PRIMARY KEY, name TEXT, color TEXT, inventory INTEGER, price INTEGER);
+INSERT INTO flowers VALUES (1, "Roses", "red", 85, 100);
+INSERT INTO flowers VALUES (2, "Daisies", "white", 90, 90);
+INSERT INTO flowers VALUES (3, "Lilies", "orange", 52, 95);
+INSERT INTO flowers VALUES (4, "Tulips", "purple", 20, 45);
+INSERT INTO flowers VALUES (5, "Orchid", "white", 50, 60);
+INSERT INTO flowers VALUES (6, "Carnation", "red", 150, 30);
+INSERT INTO flowers VALUES (7, "Sunflower", "yellow", 120, 65);
+INSERT INTO flowers VALUES (8, "Irises", "purple", 45, 85);
+INSERT INTO flowers VALUES (9, "Lavender", "purple", 60, 35);
+INSERT INTO flowers VALUES (10, "Daffodils", "yellow", 95, 30);
+INSERT INTO flowers VALUES (11, "Buttercups", "yellow", 200, 25);
+INSERT INTO flowers VALUES (12, "Dahlias", "pink", 52, 52);
+INSERT INTO flowers VALUES (13, "Daphnes", "purple", 75, 60);
+INSERT INTO flowers VALUES (14, "Geraniums", "red", 90, 35);
+INSERT INTO flowers VALUES (15, "Magnolia", "white", 90, 65);
+
+
+-- Display all flowers over 50 dollars
+SELECT * FROM flowers WHERE price > 50 ORDER BY price desc;
+
+-- Display inventory based on color
+SELECT color, SUM(inventory) FROM flowers GROUP BY color
